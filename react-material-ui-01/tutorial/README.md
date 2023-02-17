@@ -6,14 +6,20 @@ git add . && git commit -m "react-material-ui-01" && git push
 
 # Homeworks
 
-## [O] Homework 001
+## [X] Homework 001
 
 Create a password input with show/hide functionality (adornments).
+
+# App Ideas
+
+## CV Generator
+
+## Ban Auto Generated Messages (like on twitch)
 
 # Materials
 
 - [Tutorial][tutorial-video]
-- [MUI Dedfault Theme][mui-default-theme]
+- [MUI Default Theme][mui-default-theme]
 - [MUI Palette][mui-palette]
 - [MUI Icons][mui-icons]
 
