@@ -1,5 +1,9 @@
 # react-material-ui-01
 
+```
+git add . && git commit -m "react-material-ui-01" && git push
+```
+
 # Homeworks
 
 ## [O] Homework 001
