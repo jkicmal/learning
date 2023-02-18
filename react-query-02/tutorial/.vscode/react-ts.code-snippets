@@ -1,0 +1,54 @@
+{
+  "Log To The Console": {
+    "scope": "javascript,typescript",
+    "prefix": "log",
+    "body": ["console.log('$1');", "$2"],
+    "description": "Log output to console"
+  },
+  "React Functional Component": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rfc",
+    "body": [
+      "const ${TM_FILENAME_BASE}: React.FC = () => {",
+      "  return <div>${TM_FILENAME_BASE}</div>;",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ]
+  },
+  "React Functional Component With Props": {
+    "scope": "typescriptreact",
+    "prefix": "rfcp",
+    "body": [
+      "interface ${TM_FILENAME_BASE}Props {}",
+      "",
+      "const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = (props) => {",
+      "  const {} = props;",
+      "  return <div>${TM_FILENAME_BASE}</div>;",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ]
+  },
+  "React Functional Component With Props With Children": {
+    "scope": "typescriptreact",
+    "prefix": "rfcpc",
+    "body": [
+      "import { PropsWithChildren } from \"react\";",
+      "",
+      "interface ${TM_FILENAME_BASE}Props {}",
+      "",
+      "const ${TM_FILENAME_BASE}: React.FC<PropsWithChildren<${TM_FILENAME_BASE}Props>> = (props) => {",
+      "  const { children } = props;",
+      "  return <div>${TM_FILENAME_BASE}</div>;",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ]
+  },
+  "Use State": {
+    "scope": "typescriptreact",
+    "prefix": "ustate",
+    "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3)"]
+  }
+}
