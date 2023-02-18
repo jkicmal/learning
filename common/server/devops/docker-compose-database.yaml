@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+  database:
+    image: 'postgres:15.2'
+    container_name: database
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=main
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'database:/var/lib/postgresql/data'
+    networks:
+      - common
+  pg_admin:
+    image: dpage/pgadmin4
+    container_name: pg_admin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - '5050:80'
+    networks:
+      - common
+
+networks:
+  common:
+    name: 'common-network'
+
+volumes:
+  database:
+    name: 'database-volume'
